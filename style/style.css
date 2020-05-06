@@ -19,16 +19,7 @@ color: #FFFFFF;
 /*background-color:none !important;*/
 }
 
-function onWindowLoad(){
-    const startButton = document.getElementByIs("startButton");
-    if (startButton !== null) {
-        addEventListener("click", onStartButtonPressed);
-        setTotalPoints();
-    } else {
-        window.alert("Application has failed to load.")
-    }
 
-}
 
 
 

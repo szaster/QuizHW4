@@ -60,6 +60,11 @@ function displayQuestion(){
 
 }
 
+function displayTotalPoints() {
+    const qt = document.getElementById("pointsDisplay");{
+        qt.innerText = totalPoints;
+    }
+}
 
 
 
@@ -87,14 +92,9 @@ function onStartButtonPressed() {
 
 
 function onWindowLoad(){
-    const startButton = document.getElementByIs("startButton");
-    if (startButton !== null) {
-        addEventListener("click", onStartButtonPressed);
-        setTotalPoints();
-    } else {
-        window.alert("Application has failed to load.")
-    }
-
+    const startButton = document.getElementById("startButton");
+    addEventListener("click", onStartButtonPressed);
+    setTotalPoints();
 }
 
 
