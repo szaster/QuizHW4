@@ -37,10 +37,26 @@ function setTotalPoints() {
     }
 }
 
+function hideWelcomeRegion() {
+    const welcomeRegion = document.getElementById("welcomeRegion"); {
+        welcomeRegion.style.display = "none";
+    }
+}
+
 
 
 function displayQuestion(){
     question = questions[currentQuestion];
+    if (question) {
+        const qt = document.getElementById("questionText");{
+            qt.innerText = question.text;
+        }
+        for (i = 0; i < nAnswers; i++) {
+            let answer = document.getElementById("answer" + (i + 1));{
+                answer.innerText = question.answers[i];
+            }
+        }
+    }
 
 }
 
