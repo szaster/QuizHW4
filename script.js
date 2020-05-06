@@ -20,9 +20,9 @@ let questions = [
         correct: 0
     },
     {
-        text: "What is the correct syntax for referring to an external script called \"xxx.js\"?",
+        text: "What is the correct syntax for referring to an external script called \"abc.js\"?",
         answers: [
-            "<script href=\"xxx.js\">", "<script src=\"xxx.js\">", "<script name=\"xxx.js\">", "None of the above"
+            "<script href=\"abc.js\">", "<script src=\"abc.js\">", "<script name=\"abc.js\">", "None of the above"
         ],
         points: 5,
         correct: 1
@@ -39,20 +39,34 @@ function setTotalPoints() {
 
 
 
+function displayQuestion(){
+    question = questions[currentQuestion];
+
+}
 
 
 
 
+function attachClickHandlers(){
+    const lc = document.getElementById("submitQuestion"); {
+        lc.addEventListener("click", submitQuestion);
+    }
+}
+
+function showQuestionRegion() {
+    const form = document.getElementById("questionRegion");{
+        form.style.display = "block";
+    }
+}
 
 
-
-
-
-
-
-
-
-
+function onStartButtonPressed() {
+    hideWelcomeRegion();
+    showQuestionRegion();
+    attachClickHandlers();
+    displayQuestion();
+    displayTotalPoints();
+};
 
 
 
