@@ -38,12 +38,27 @@ function setTotalPoints() {
 }
 
 function hideWelcomeRegion() {
-    const welcomeRegion = document.getElementById("welcomeRegion"); {
+    const welcomeRegion = document.getElementById("welcomeRegion"); 
+        if (welcomeRegion !== null) {
         welcomeRegion.style.display = "none";
     }
 }
 
+function submitQuestion(){
+    if (currentQuestion < questions.length){
+        for (i = 0; i < nAnswers; i++){
+            let answer = document.getElementById("radio" + (i+1));
+            if (answer && answer.checked && i !== qustions[currentQuestion].correct){
+                totalPoints -= questions[currentQuestion].points;
+                displayTotalPoints();
+            }
+        }
+        currentQuestion++;
+        displayQuestion();
+    }
 
+
+}
 
 function displayQuestion(){
     question = questions[currentQuestion];
@@ -65,7 +80,6 @@ function displayTotalPoints() {
         qt.innerText = totalPoints;
     }
 }
-
 
 
 function attachClickHandlers(){
