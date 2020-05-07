@@ -44,21 +44,7 @@ function hideWelcomeRegion() {
     }
 }
 
-function submitQuestion(){
-    if (currentQuestion < questions.length){
-        for (i = 0; i < nAnswers; i++){
-            let answer = document.getElementById("radio" + (i+1));
-            if (answer && answer.checked && i !== qustions[currentQuestion].correct){
-                totalPoints -= questions[currentQuestion].points;
-                displayTotalPoints();
-            }
-        }
-        currentQuestion++;
-        displayQuestion();
-    }
 
-
-}
 
 function displayQuestion(){
     question = questions[currentQuestion];
@@ -80,6 +66,24 @@ function displayTotalPoints() {
         qt.innerText = totalPoints;
     }
 }
+
+
+function submitQuestion(){
+    if (currentQuestion < questions.length){
+        for (i = 0; i < nAnswers; i++){
+            let answer = document.getElementById("radio" + (i+1));
+            if (answer && answer.checked && i !== questions[currentQuestion].correct){
+                totalPoints -= questions[currentQuestion].points;
+                displayTotalPoints();
+            }
+        }
+        currentQuestion++;
+        displayQuestion();
+    }
+
+
+}
+
 
 
 function attachClickHandlers(){
@@ -107,9 +111,10 @@ function onStartButtonPressed() {
 
 function onWindowLoad(){
     const startButton = document.getElementById("startButton");
+    if (startButton !== null){
     addEventListener("click", onStartButtonPressed);
     setTotalPoints();
 }
-
+};
 
 window.addEventListener("load", onWindowLoad);
