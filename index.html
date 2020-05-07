@@ -1,86 +1,84 @@
 <!doctype html>
 <html lang="en">
 
-
- <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <title>Quiz</title>
-  <!-- Bootstrap core CSS !-->
-  <!--<link href="css/style.css" rel="stylesheet">
-  <!-- Custom CSS for the 'Full' Template -->
-  <!--<link href="css/full.css" rel="stylesheet">!-->
- </head>
+    <title>Quiz</title>
+        <!-- Bootstrap core CSS !-->
+        <!--<link href="css/style.css" rel="stylesheet">
+        <!-- Custom CSS for the 'Full' Template -->
+        <!--<link href="css/full.css" rel="stylesheet">!-->
+</head>
 
- <body>
+
+<body>
     <div class="jumbotron">
         <div class="container" id = "welcomeRegion">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <a class="navbar-brand" href="#">Please get ready for your quiz. You will be presented with several multiple-choice questions.
               </a>
             </nav>
-          </div>
-          <button class="btn btn-primary" id="startButton">
-            Start
-        </button>
-    </div>
-
-    <div class="container" style="display: none" id="questionRegion">
-        <p class="lead" id="questionText">
-        </p>
-
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="radio" name="answer" id="radio1">
-                </div>
-            </div>
-            <label type="text" class="form-control" id="answer1"></label>
+          <button class="btn btn-primary" id="startButton">Start</button>
         </div>
+    
+
+
+        <div class="container" style="display: none" id="questionRegion">
+            <p class="lead" id="questionText"></p>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="radio" name="answer" id="radio1">
+                    </div>
+                </div>
+                <label type="text" class="form-control" id="answer1"></label>
+            </div>
   
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="radio" name="answer" id="radio2">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="radio" name="answer" id="radio2">
+                    </div>
                 </div>
+                <label type="text" class="form-control" id="answer2"></label>
             </div>
-            <label type="text" class="form-control" id="answer2"></label>
-        </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="radio" name="answer" id="radio3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="radio" name="answer" id="radio3">
+                    </div>
                 </div>
+                <label type="text" class="form-control" id="answer3"></label>
             </div>
-            <label type="text" class="form-control" id="answer3"></label>
-        </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="radio" name="answer" id="radio4">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="radio" name="answer" id="radio4">
+                    </div>
                 </div>
+                <label type="text" class="form-control" id="answer4"></label>
             </div>
-            <label type="text" class="form-control" id="answer4"></label>
-        </div>
-        <button class ="btn btn-primary" id = "submitQuestion">
-            Submit
-        </button>
+            <button class ="btn btn-primary" id = "submitQuestion">
+                Submit
+            </button>
 
-        <div class="container" style="padding: 1em;">
-            <div class="alert alert-light" role="alert">
-              <strong>Points left to earn</strong>
-            </div>
-            <div class="alert alert-primary" role="alert">
-              <strong id="pointsDisplay"></strong>
-            </div>
-      </div>
+                <div class="container" style="padding: 1em;">
+                    <div class="alert alert-light" role="alert">
+                     <strong>Points left to earn</strong>
+                     </div>
+                    <div class="alert alert-primary" role="alert">
+                    <strong id="pointsDisplay"></strong>
+                    </div>
+                </div>
+        </div>
     </div>
-</div>
- </body>
+</body>
 
 <script src="./script.js"></script>
 
